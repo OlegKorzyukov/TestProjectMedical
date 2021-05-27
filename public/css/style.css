@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 header {
   padding: 10px;
@@ -30,7 +31,9 @@ header h1 {
 .input__supplies form select {
   width: 20%;
   padding: 10px 23px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
 }
 .input__supplies .button__wrapper {
   display: flex;
@@ -59,4 +62,31 @@ header h1 {
   margin-top: 3px;
   color: #666;
   font-size: 18px;
+}
+
+/*  CATEGORY  */
+.category {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px;
+}
+.category .content__card {
+  width: 20%;
+  padding: 50px;
+  background-color: #666;
+  cursor: pointer;
+}
+.content__card .content__card--title {
+  text-align: center;
+  color: #fff;
+}
+.category .content__card:nth-child(1) {
+  background-color: #2c52bda8;
+}
+.category .content__card:nth-child(2) {
+  background-color: #8e154280;
+}
+.category .content__card:nth-child(3) {
+  background-color: #11670ba6;
 }

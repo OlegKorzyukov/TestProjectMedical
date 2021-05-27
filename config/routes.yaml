@@ -1,7 +1,9 @@
 index:
   path: /
   controller: App\Controller\SuppliesController::index
+  methods: GET
 
 store_medical:
   path: /
   controller: App\Controller\SuppliesController::store
+  methods: POST
