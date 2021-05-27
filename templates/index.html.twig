@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Каталог лекарственных средств{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
+            {#{{ encore_entry_link_tags('app') }}#}
+        {% endblock %}
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="wrapper">
+        {% block body %}
+            <header class="header">
+                <h1>Каталог лекарственных средств</h1>
+            </header>
+            <section class="input__supplies">
+                <form action="{{ path('store_medical') }}" method="POST" name="new_supplies">
+                    <div class="input__wrapper">
+                        <input class="supplies_name input_field" name="supplies_name" type="text" placeholder="Название">
+                        <select class="supplies_type" name="supplies_list">
+                            <option value="substance" selected>Действующее вещество</option>
+                            <option value="manufacturer">Производитель</option>
+                            <option value="medicine">Лекарственное средство</option>
+                        </select>
+                    </div>
+                    <div class="button__wrapper">
+                        <input class="form__send" type="submit" name="Добавить">
+                    </div>
+                </form>
+            </section>
+            <section class="category">
+                {{ controller_name }}
+
+            </section>
+        {% endblock %}
+        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ asset('js/index.js') }}"></script>
+    </body>
+</html>

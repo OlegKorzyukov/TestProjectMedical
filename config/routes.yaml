@@ -1,3 +1,7 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+  path: /
+  controller: App\Controller\SuppliesController::index
+
+store_medical:
+  path: /
+  controller: App\Controller\SuppliesController::store
